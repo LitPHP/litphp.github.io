@@ -16,8 +16,8 @@
     <!--[if lt IE 9]>
     <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
     <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="../js/jquery.smooth-scroll.js"></script>
     <script src="../js/prism.min.js"></script>
@@ -40,14 +40,7 @@
 
             <div class="nav-collapse">
                 <ul class="nav pull-right">
-                    <li class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
-                            API Documentation <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                                                    </ul>
-                    </li>
-                    <li class="dropdown" id="charts-menu">
+                                        <li class="dropdown" id="charts-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Charts <b class="caret"></b>
                         </a>
@@ -66,12 +59,17 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">52</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">42</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="../reports/markers.html">
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
                                 </a>
                             </li>
                         </ul>
@@ -91,19 +89,18 @@
 
             <ul class="side-nav nav nav-list">
                 <li class="nav-header">Navigation</li>
-                                                                            <li><a href="#Lit\Http\View.php"><i class="icon-file"></i> Lit\Http\View.php</a></li>
-                                                                                                    <li><a href="#Lit\Result.php"><i class="icon-file"></i> Lit\Result.php</a></li>
-                                                                                                    <li><a href="#Lit\Http\View\Template.php"><i class="icon-file"></i> Lit\Http\View\Template.php</a></li>
-                                                                                                    <li><a href="#Lit\Http\Conversation.php"><i class="icon-file"></i> Lit\Http\Conversation.php</a></li>
-                                                                                                    <li><a href="#Lit\Autoloader.php"><i class="icon-file"></i> Lit\Autoloader.php</a></li>
-                                                                                                    <li><a href="#Lit\Route\Manager\Basic.php"><i class="icon-file"></i> Lit\Route\Manager\Basic.php</a></li>
-                                                                                                    <li><a href="#Lit\Route\Manager\Child.php"><i class="icon-file"></i> Lit\Route\Manager\Child.php</a></li>
-                                                                                                    <li><a href="#Lit\Object.php"><i class="icon-file"></i> Lit\Object.php</a></li>
-                                                                                                    <li><a href="#Lit\App.php"><i class="icon-file"></i> Lit\App.php</a></li>
-                                                                                                    <li><a href="#Lit\Route\Base.php"><i class="icon-file"></i> Lit\Route\Base.php</a></li>
-                                                                                                    <li><a href="#Lit\ITemplate.php"><i class="icon-file"></i> Lit\ITemplate.php</a></li>
-                                                                                                    <li><a href="#Lit\Route\Regex.php"><i class="icon-file"></i> Lit\Route\Regex.php</a></li>
-                                                                                                    <li><a href="#Lit\Route\Any.php"><i class="icon-file"></i> Lit\Route\Any.php</a></li>
+                                                                            <li><a href="#Lit/App.php"><i class="icon-file"></i> Lit/App.php</a></li>
+                                                                                                    <li><a href="#Lit/Autoloader.php"><i class="icon-file"></i> Lit/Autoloader.php</a></li>
+                                                                                                                                                            <li><a href="#Lit/Http/View/Template.php"><i class="icon-file"></i> Lit/Http/View/Template.php</a></li>
+                                                                                                    <li><a href="#Lit/Http/View.php"><i class="icon-file"></i> Lit/Http/View.php</a></li>
+                                                                                                    <li><a href="#Lit/ITemplate.php"><i class="icon-file"></i> Lit/ITemplate.php</a></li>
+                                                                                                    <li><a href="#Lit/Object.php"><i class="icon-file"></i> Lit/Object.php</a></li>
+                                                                                                    <li><a href="#Lit/Result.php"><i class="icon-file"></i> Lit/Result.php</a></li>
+                                                                                                    <li><a href="#Lit/Route/Any.php"><i class="icon-file"></i> Lit/Route/Any.php</a></li>
+                                                                                                    <li><a href="#Lit/Route/Base.php"><i class="icon-file"></i> Lit/Route/Base.php</a></li>
+                                                                                                    <li><a href="#Lit/Route/Manager/Basic.php"><i class="icon-file"></i> Lit/Route/Manager/Basic.php</a></li>
+                                                                                                    <li><a href="#Lit/Route/Manager/Child.php"><i class="icon-file"></i> Lit/Route/Manager/Child.php</a></li>
+                                                                                                    <li><a href="#Lit/Route/Regex.php"><i class="icon-file"></i> Lit/Route/Regex.php</a></li>
                                                                                                     <li><a href="#lit.inc.php"><i class="icon-file"></i> lit.inc.php</a></li>
                                                                     </ul>
         </div>
@@ -116,338 +113,10 @@
 
             
                             <div class="package-contents">
-                                            <a name="Lit\Http\View.php" id="Lit\Http\View.php"></a>
+                                            <a name="Lit/App.php" id="Lit/App.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Lit\Http\View.php
-                            <small style="float: right;padding-right: 10px;">1</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>14</td>
-                                        <td>No summary for method output()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Result.php" id="Lit\Result.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Result.php
-                            <small style="float: right;padding-right: 10px;">1</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>15</td>
-                                        <td>No summary for method output()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Http\View\Template.php" id="Lit\Http\View\Template.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Http\View\Template.php
-                            <small style="float: right;padding-right: 10px;">6</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>14</td>
-                                        <td>No summary for property $template</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>20</td>
-                                        <td>No summary for method __construct()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>26</td>
-                                        <td>No summary for method output()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>36</td>
-                                        <td>No summary for method render()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>46</td>
-                                        <td>No summary for method template()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>53</td>
-                                        <td>No summary for method data()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Http\Conversation.php" id="Lit\Http\Conversation.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Http\Conversation.php
-                            <small style="float: right;padding-right: 10px;">8</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>20</td>
-                                        <td>No summary for method uri()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>32</td>
-                                        <td>No summary for method server()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>43</td>
-                                        <td>No summary for method get()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>54</td>
-                                        <td>No summary for method post()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>65</td>
-                                        <td>No summary for method cookie()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>81</td>
-                                        <td>No summary for method sendCookie()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>99</td>
-                                        <td>No summary for method sendHeader()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>109</td>
-                                        <td>No summary for method sendResponseCode()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Autoloader.php" id="Lit\Autoloader.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Autoloader.php
-                            <small style="float: right;padding-right: 10px;">5</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>14</td>
-                                        <td>No summary for property $root</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>22</td>
-                                        <td>No summary for method register()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>27</td>
-                                        <td>Argument $root is missing from the Docblock of __construct()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>27</td>
-                                        <td>No summary for method __construct()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>41</td>
-                                        <td>No summary for method autoload()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Route\Manager\Basic.php" id="Lit\Route\Manager\Basic.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Route\Manager\Basic.php
-                            <small style="float: right;padding-right: 10px;">6</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>19</td>
-                                        <td>No summary for property $routes</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>28</td>
-                                        <td>No summary for method regex()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>39</td>
-                                        <td>No summary for method any()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>49</td>
-                                        <td>No summary for method beginChild()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>60</td>
-                                        <td>No summary for method attachRoute()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>67</td>
-                                        <td>No summary for method trigger()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Route\Manager\Child.php" id="Lit\Route\Manager\Child.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Route\Manager\Child.php
-                            <small style="float: right;padding-right: 10px;">3</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>16</td>
-                                        <td>No summary for property $parent</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>18</td>
-                                        <td>No summary for method __construct()</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>30</td>
-                                        <td>No summary for method endChild()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\Object.php" id="Lit\Object.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\Object.php
-                            <small style="float: right;padding-right: 10px;">2</small>
-                        </h3>
-                        <div>
-                            <table class="table markers table-bordered">
-                                <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Line</th>
-                                    <th>Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>21</td>
-                                        <td>No summary for property $app</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>13</td>
-                                        <td>No summary for method __construct()</td>
-                                    </tr>
-                                                            </tbody>
-                            </table>
-                        </div>
-                                    </div>
-                            <div class="package-contents">
-                                            <a name="Lit\App.php" id="Lit\App.php"></a>
-                        <h3>
-                            <i class="icon-file"></i>
-                            Lit\App.php
+                            Lit/App.php
                             <small style="float: right;padding-right: 10px;">10</small>
                         </h3>
                         <div>
@@ -460,26 +129,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>17</td>
-                                        <td>No summary for property $result</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>21</td>
-                                        <td>No summary for property $router</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>25</td>
-                                        <td>No summary for property $context</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>29</td>
-                                        <td>No summary for property $http</td>
-                                    </tr>
                                                                     <tr>
                                         <td>error</td>
                                         <td>46</td>
@@ -510,15 +159,134 @@
                                         <td>128</td>
                                         <td>No summary for method http()</td>
                                     </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>17</td>
+                                        <td>No summary for property $result</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>21</td>
+                                        <td>No summary for property $router</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for property $context</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>No summary for property $http</td>
+                                    </tr>
                                                             </tbody>
                             </table>
                         </div>
                                     </div>
                             <div class="package-contents">
-                                            <a name="Lit\Route\Base.php" id="Lit\Route\Base.php"></a>
+                                            <a name="Lit/Autoloader.php" id="Lit/Autoloader.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Lit\Route\Base.php
+                            Lit/Autoloader.php
+                            <small style="float: right;padding-right: 10px;">5</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>22</td>
+                                        <td>No summary for method register()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>Argument $root is missing from the Docblock of __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>27</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>41</td>
+                                        <td>No summary for method autoload()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $root</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Http/View/Template.php" id="Lit/Http/View/Template.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Http/View/Template.php
+                            <small style="float: right;padding-right: 10px;">6</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>20</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>26</td>
+                                        <td>No summary for method output()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>36</td>
+                                        <td>No summary for method render()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>46</td>
+                                        <td>No summary for method template()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>53</td>
+                                        <td>No summary for method data()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $template</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Http/View.php" id="Lit/Http/View.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Http/View.php
                             <small style="float: right;padding-right: 10px;">1</small>
                         </h3>
                         <div>
@@ -533,18 +301,18 @@
                                 <tbody>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>19</td>
-                                        <td>No summary for method trigger()</td>
+                                        <td>14</td>
+                                        <td>No summary for method output()</td>
                                     </tr>
                                                             </tbody>
                             </table>
                         </div>
                                     </div>
                             <div class="package-contents">
-                                            <a name="Lit\ITemplate.php" id="Lit\ITemplate.php"></a>
+                                            <a name="Lit/ITemplate.php" id="Lit/ITemplate.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Lit\ITemplate.php
+                            Lit/ITemplate.php
                             <small style="float: right;padding-right: 10px;">1</small>
                         </h3>
                         <div>
@@ -567,11 +335,11 @@
                         </div>
                                     </div>
                             <div class="package-contents">
-                                            <a name="Lit\Route\Regex.php" id="Lit\Route\Regex.php"></a>
+                                            <a name="Lit/Object.php" id="Lit/Object.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Lit\Route\Regex.php
-                            <small style="float: right;padding-right: 10px;">4</small>
+                            Lit/Object.php
+                            <small style="float: right;padding-right: 10px;">2</small>
                         </h3>
                         <div>
                             <table class="table markers table-bordered">
@@ -585,33 +353,49 @@
                                 <tbody>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>18</td>
-                                        <td>No summary for property $pattern</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>19</td>
-                                        <td>No summary for property $callback</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>26</td>
+                                        <td>13</td>
                                         <td>No summary for method __construct()</td>
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>34</td>
-                                        <td>No summary for method trigger()</td>
+                                        <td>21</td>
+                                        <td>No summary for property $app</td>
                                     </tr>
                                                             </tbody>
                             </table>
                         </div>
                                     </div>
                             <div class="package-contents">
-                                            <a name="Lit\Route\Any.php" id="Lit\Route\Any.php"></a>
+                                            <a name="Lit/Result.php" id="Lit/Result.php"></a>
                         <h3>
                             <i class="icon-file"></i>
-                            Lit\Route\Any.php
+                            Lit/Result.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>15</td>
+                                        <td>No summary for method output()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Route/Any.php" id="Lit/Route/Any.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Route/Any.php
                             <small style="float: right;padding-right: 10px;">3</small>
                         </h3>
                         <div>
@@ -626,18 +410,162 @@
                                 <tbody>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>31</td>
-                                        <td>No summary for property $callback</td>
-                                    </tr>
-                                                                    <tr>
-                                        <td>error</td>
-                                        <td>19</td>
+                                        <td>20</td>
                                         <td>No summary for method __construct()</td>
                                     </tr>
                                                                     <tr>
                                         <td>error</td>
-                                        <td>26</td>
+                                        <td>27</td>
                                         <td>No summary for method trigger()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>14</td>
+                                        <td>No summary for property $callbacks</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Route/Base.php" id="Lit/Route/Base.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Route/Base.php
+                            <small style="float: right;padding-right: 10px;">1</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>25</td>
+                                        <td>No summary for method invokeCallbacks()</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Route/Manager/Basic.php" id="Lit/Route/Manager/Basic.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Route/Manager/Basic.php
+                            <small style="float: right;padding-right: 10px;">4</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>29</td>
+                                        <td>Argument $callback is missing from the Docblock of regex()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>44</td>
+                                        <td>Argument $callback is missing from the Docblock of any()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>74</td>
+                                        <td>No summary for method trigger()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $routes</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Route/Manager/Child.php" id="Lit/Route/Manager/Child.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Route/Manager/Child.php
+                            <small style="float: right;padding-right: 10px;">3</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>30</td>
+                                        <td>No summary for method endChild()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>16</td>
+                                        <td>No summary for property $parent</td>
+                                    </tr>
+                                                            </tbody>
+                            </table>
+                        </div>
+                                    </div>
+                            <div class="package-contents">
+                                            <a name="Lit/Route/Regex.php" id="Lit/Route/Regex.php"></a>
+                        <h3>
+                            <i class="icon-file"></i>
+                            Lit/Route/Regex.php
+                            <small style="float: right;padding-right: 10px;">4</small>
+                        </h3>
+                        <div>
+                            <table class="table markers table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Line</th>
+                                    <th>Description</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>26</td>
+                                        <td>No summary for method __construct()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>34</td>
+                                        <td>No summary for method trigger()</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>18</td>
+                                        <td>No summary for property $pattern</td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>error</td>
+                                        <td>19</td>
+                                        <td>No summary for property $callbacks</td>
                                     </tr>
                                                             </tbody>
                             </table>
@@ -708,7 +636,7 @@
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on March 2nd, 2014 at 16:58.
+                    on June 21st, 2014 at 10:44.
                 </section>
             </section>
         </section>
