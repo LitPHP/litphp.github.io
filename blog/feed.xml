@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>LitPHP Blog</title>
+        <link>https://litphp.github.io/blog</link>
+        <description>The best place to stay up-to-date with the latest LitPHP news and events.</description>
+        <lastBuildDate>Sun, 04 Nov 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>LitPHP Blog</title>
+            <url>https://litphp.github.io/img/lit.svg</url>
+            <link>https://litphp.github.io/blog</link>
+        </image>
+        <copyright>Copyright © 2018 McFog Wang</copyright>
+        <item>
+            <title><![CDATA[Roadmap towards 0.9]]></title>
+            <link>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9.html</link>
+            <guid>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9.html</guid>
+            <pubDate>Sun, 04 Nov 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This is our first blog entry. Since we are stepping forward to 0.9 release, here's a list of goal of the 0.9 version.</p> <ul> <li>API should be stable enough. We don't want to do any BC break in future 1.0 release.</li> <li>Complete documentation &amp; project sites</li> <li>Add ...</li></ul>]]></description>
+        </item>
+    </channel>
+</rss>

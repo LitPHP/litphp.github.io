@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://litphp.github.io/help</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/en/help" /> </url>
+<url> <loc>https://litphp.github.io/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/en/index" /> </url>
+<url> <loc>https://litphp.github.io/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/en/users" /> </url>
+<url> <loc>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://litphp.github.io/docs/design</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/design" /> </url>
+<url> <loc>https://litphp.github.io/docs</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs" /> </url>
+<url> <loc>https://litphp.github.io/docs/lit-router</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-router" /> </url>
+<url> <loc>https://litphp.github.io/docs/lit-view</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-view" /> </url>
+<url> <loc>https://litphp.github.io/docs/lit</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit" /> </url>
+<url> <loc>https://litphp.github.io/docs/nimo-condition</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-condition" /> </url>
+<url> <loc>https://litphp.github.io/docs/nimo-exception</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-exception" /> </url>
+<url> <loc>https://litphp.github.io/docs/nimo-roll</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-roll" /> </url>
+<url> <loc>https://litphp.github.io/docs/nimo</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo" /> </url>
+<url> <loc>https://litphp.github.io/docs/quickstart</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/quickstart" /> </url>
+<url> <loc>https://litphp.github.io/docs/runner</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/runner" /> </url>
+</urlset>
