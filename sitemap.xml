@@ -4,8 +4,13 @@
 <url> <loc>https://litphp.github.io/index</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/en/index" /> </url>
 <url> <loc>https://litphp.github.io/users</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/en/users" /> </url>
 <url> <loc>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>https://litphp.github.io/docs/air-config</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air-config" /> </url>
+<url> <loc>https://litphp.github.io/docs/air-di</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air-di" /> </url>
+<url> <loc>https://litphp.github.io/docs/air-dynamic</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air-dynamic" /> </url>
+<url> <loc>https://litphp.github.io/docs/air-local</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air-local" /> </url>
+<url> <loc>https://litphp.github.io/docs/air</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air" /> </url>
 <url> <loc>https://litphp.github.io/docs/design</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/design" /> </url>
-<url> <loc>https://litphp.github.io/docs</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs" /> </url>
+<url> <loc>https://litphp.github.io/docs/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/" /> </url>
 <url> <loc>https://litphp.github.io/docs/lit-router</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-router" /> </url>
 <url> <loc>https://litphp.github.io/docs/lit-view</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-view" /> </url>
 <url> <loc>https://litphp.github.io/docs/lit</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit" /> </url>

@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Dependency injection · LitPHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_injection&quot;&gt;Dependency injection&lt;/a&gt; is a technique to fulfill &lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;the IoC principle&lt;/a&gt; (&lt;strong&gt;I&lt;/strong&gt;nversion &lt;strong&gt;o&lt;/strong&gt;f &lt;strong&gt;C&lt;/strong&gt;ontrol), or &amp;quot;Hollywood Principle&amp;quot;, focusing on provide (inject) dependency for some object (product).&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Dependency injection · LitPHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://litphp.github.io/index.html"/><meta property="og:description" content="&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Dependency_injection&quot;&gt;Dependency injection&lt;/a&gt; is a technique to fulfill &lt;a href=&quot;https://en.wikipedia.org/wiki/Inversion_of_control&quot;&gt;the IoC principle&lt;/a&gt; (&lt;strong&gt;I&lt;/strong&gt;nversion &lt;strong&gt;o&lt;/strong&gt;f &lt;strong&gt;C&lt;/strong&gt;ontrol), or &amp;quot;Hollywood Principle&amp;quot;, focusing on provide (inject) dependency for some object (product).&lt;/p&gt;
+"/><meta property="og:image" content="https://litphp.github.io/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://litphp.github.io/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/foundation.min.css"/><link rel="alternate" type="application/atom+xml" href="https://litphp.github.io/blog/atom.xml" title="LitPHP Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://litphp.github.io/blog/feed.xml" title="LitPHP Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/lit.svg" alt="LitPHP"/><h2 class="headerTitleWithLogo">LitPHP</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Air</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/runner">Runner and servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Lit</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/lit">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/lit-view">View</a></li><li class="navListItem"><a class="navItem" href="/docs/lit-router">Router</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Nimo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/nimo">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-condition">Condition</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-exception">Exception handling</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-roll">Write your own</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Air</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/air">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/air-local">Local Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/air-dynamic">Dynamic Entries</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/air-di">Dependency Injection</a></li><li class="navListItem"><a class="navItem" href="/docs/air-config">Configuration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Dependency injection</h1></header><article><div><span><p><a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency injection</a> is a technique to fulfill <a href="https://en.wikipedia.org/wiki/Inversion_of_control">the IoC principle</a> (<strong>I</strong>nversion <strong>o</strong>f <strong>C</strong>ontrol), or &quot;Hollywood Principle&quot;, focusing on provide (inject) dependency for some object (product).</p>
+<p>We devide this article into two parts. First we'll look into the ways to call DI procedure, and then we talk about how to provide (and control) dependencies.</p>
+<h2><a class="anchor" aria-hidden="true" id="calling-dependency-injection"></a><a href="#calling-dependency-injection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Calling dependency injection</h2>
+<h4><a class="anchor" aria-hidden="true" id="get-factory-instance"></a><a href="#get-factory-instance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>get $factory instance</h4>
+<p>First of all you should get your <code>Factory</code> instance where all DI functionality resides on. Our <code>Factory</code> depends on a <code>Container</code> to store dependencies &amp; configurations, but the constructor just typehint on PSR <code>ContainerInterface</code> and allow null value.</p>
+<ul>
+<li>if <code>Container</code> instance is provided, <code>Factory</code> use that directly</li>
+<li>if arbitrary PSR <code>ContainerInterface</code> instance is provided, <code>Factory</code> create a <code>Container</code> and use <code>$container-&gt;setDelegateContainer</code> so missing entries will be fallback to provided container instance</li>
+<li>if null is provide, <code>Factory</code> create an empty <code>Container</code> itself</li>
+</ul>
+<p>After initialted, Factory will set itself into corresponding <code>$container</code> instance, so if you have container instance, please use <code>Factory::of($container)</code> to get factory instance.</p>
+<h4><a class="anchor" aria-hidden="true" id="instantiate-produce"></a><a href="#instantiate-produce" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>instantiate &amp; produce</h4>
+<p>The most straightforward way to call DI procedure is <code>$factory-&gt;instantiate</code>, it take $classname as first parameter, optionally followed by extra parameter (array of dependency), and return a instance of  $classname</p>
+<p>Every time you call <code>$factory-&gt;instantiate</code> the factory will create a new instance for you, but chances are that you want to create instance only once and reuse it on preceding calls, that's where <code>$factory-&gt;produce</code> should be used. It takes exactly same parameter with instantiate, behind the scenes we just use the classname to identify instance, so make sure you pass same <code>$extra</code> everytime. Only first time the object is created and that <code>$extra</code> is used, later calls of same $classname will simple get previously created instance, the <code>$extra</code> will be silently ignored.</p>
+<h4><a class="anchor" aria-hidden="true" id="setter-injection"></a><a href="#setter-injection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setter injection</h4>
+<p>Setter injection is an optional feature of air. When you call instantiate or produce, before the factory return the product, it will check for if there are registered injectors and try to inject dependencies. By default, all instance method begin with &quot;inject&quot; and requires exactly one parameter will be considered an injection point, the factory will run DI procedure to create the dependency and call that method.</p>
+<p>There are some boilerplate works need to be done to make setter injection works. First you need include <code>SetterInjector::configuration()</code> in your container configuration (or you need more injectors, read its code!), then in class need setter injection, declare <code>const SETTER_INJECTOR = SetterInjector::class;</code>to tell setter injector to scan this class.</p>
+<h4><a class="anchor" aria-hidden="true" id="invoke"></a><a href="#invoke" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>invoke</h4>
+<p>Instead of creating objects, <code>$factory-&gt;invoke</code> calls a callable when use dependency injection mechanism to resolve parameters. Like instantiate &amp; produce, it receive optional second parameter <code>$extra</code> to provide dependencies in addition to the container</p>
+<h4><a class="anchor" aria-hidden="true" id="recipes-related-to-di"></a><a href="#recipes-related-to-di" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>recipes related to DI</h4>
+<p>Finally, there're some recipes calls factory to start DI procedure</p>
+<table>
+<thead>
+<tr><th>Recipe</th><th>Factory method</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>AutowireRecipe</td><td>produce</td><td>when <code>$classname</code> is null, the recipe will use container key as classname</td></tr>
+<tr><td>InstanceRecipe</td><td>instantiate</td><td><code>$classname</code> can also be null</td></tr>
+<tr><td>BuilderRecipe</td><td>invoke</td><td>can be used to build non-object value, or call 3rd-party factory method</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="working-on-dependencies"></a><a href="#working-on-dependencies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Working on dependencies</h2>
+<p>(see <code>Factory::resolveDependency</code>)</p>
+<p>When air resolve a dependency, it inspect (with reflect API) to get below info first</p>
+<ul>
+<li>string $basename: name of the dependent object
+<ul>
+<li>It's the classname of object which is being created (or injected on)</li>
+<li>For <code>$factory-&gt;invoke</code> call, it's &quot;!&quot; following the callable name, full namespaced. For method, name of class and method is glued by <code>::</code></li>
+</ul></li>
+<li>string[] $keys &quot;candicate key&quot; of the dependency
+<ul>
+<li>for now all the dependency item are represent by parameter</li>
+<li>the $keys are (ordered)
+<ol>
+<li>name of the parameter</li>
+<li>classname if the parameter is type hinted</li>
+<li>the index of the parameter (not applicapable for setter injection)</li>
+</ol></li>
+</ul></li>
+<li>string $classname: the classname if the parameter is type hinted</li>
+<li>array $extra: extra dependency entries in addition to container</li>
+</ul>
+<p>Then <code>Factory</code> tries following ways of creating dependency</p>
+<ol>
+<li><p>try to find corresponding <strong>configuration</strong> and resolve it</p>
+<ul>
+<li>For each candicate key in <code>$keys</code>, look for <code>$extra</code> provided</li>
+<li>Look for container entry with key <code>$basename . &quot;::&quot;</code>
+<ul>
+<li>if <code>$basename</code> is a classname, also try look for it's parent class until no parent class is available</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>See <a href="air-config#structure-of-configuration">configuration</a> section for more details about how a configuration value is resolved</p>
+</blockquote></li>
+<li><p>if <code>$classname</code> is available, try to find container entry with key `$classname</p></li>
+<li><p>try to instantiate <code>$classname</code> directly</p></li>
+</ol>
+<p>If all the above approach failed or not available, <code>Factory</code> would throw a <code>ContainerException</code></p>
+<p>If the procedure is <code>instantiate</code> or <code>produce</code>, after the instance is created, it will be scanned by registered injectors, and inject if any of them hits. For now the only bundled injector is <code>SetterInjector</code></p>
+<p>Since configuration / recipe resolving might involve cascading DI procudure when (just before) constructing instance, it's possible to happen circular dependency, which will be cauth by <code>Factory</code> and throw a specific <code>CircularDependencyException</code>. We recommend to rethink of your dependency of abstraction of code, try refactor your code to avoid this, but if that's not easy, you can use setter injection, which actually inject <strong>after</strong> object is created, thus can break the loop.</p>
+<p>We don't talk about configuration here since it's a <em>circular dependency of documentation</em>! Configuration is resolved to recipe object, and recipe can call <code>Factory</code> to inject dependency (we do list them in this article), and when DI procedure is running, both configuration and recipe (registered to container) may be involved!</p>
+<p>Now you should have enough idea about how DI in air works, please head to <a href="air-config">configuration section</a>, if you haven't read that yet.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/air-dynamic"><span class="arrow-prev">← </span><span>Dynamic Entries</span></a><a class="docs-next button" href="/docs/air-config"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#calling-dependency-injection">Calling dependency injection</a></li><li><a href="#working-on-dependencies">Working on dependencies</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/lit.svg" alt="LitPHP" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/.">QuickStart</a></div><div><h5>Community</h5><a href="https://gitter.im/litphp/Lobby?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link" target="_blank" rel="noreferrer noopener"><img src="//badges.gitter.im/litphp.png" alt="Chat on gitter"/></a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/litphp">GitHub</a></div></section><section class="copyright">Copyright © 2019 McFog Wang</section></footer></div></body></html>
