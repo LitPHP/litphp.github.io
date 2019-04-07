@@ -11,13 +11,13 @@
 <url> <loc>https://litphp.github.io/docs/air</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/air" /> </url>
 <url> <loc>https://litphp.github.io/docs/design</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/design" /> </url>
 <url> <loc>https://litphp.github.io/docs/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/" /> </url>
-<url> <loc>https://litphp.github.io/docs/lit-router</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-router" /> </url>
-<url> <loc>https://litphp.github.io/docs/lit-view</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit-view" /> </url>
-<url> <loc>https://litphp.github.io/docs/lit</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/lit" /> </url>
 <url> <loc>https://litphp.github.io/docs/nimo-condition</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-condition" /> </url>
 <url> <loc>https://litphp.github.io/docs/nimo-exception</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-exception" /> </url>
 <url> <loc>https://litphp.github.io/docs/nimo-roll</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo-roll" /> </url>
 <url> <loc>https://litphp.github.io/docs/nimo</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/nimo" /> </url>
 <url> <loc>https://litphp.github.io/docs/quickstart</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/quickstart" /> </url>
 <url> <loc>https://litphp.github.io/docs/runner</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/runner" /> </url>
+<url> <loc>https://litphp.github.io/docs/voltage-router</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/voltage-router" /> </url>
+<url> <loc>https://litphp.github.io/docs/voltage-view</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/voltage-view" /> </url>
+<url> <loc>https://litphp.github.io/docs/voltage</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://litphp.github.io/docs/voltage" /> </url>
 </urlset>
