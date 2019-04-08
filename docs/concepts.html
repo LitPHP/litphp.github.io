@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Core concepts of Lit · LitPHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;action&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#action&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Action&lt;/h2&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Core concepts of Lit · LitPHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://litphp.github.io/index.html"/><meta property="og:description" content="&lt;h2&gt;&lt;a class=&quot;anchor&quot; aria-hidden=&quot;true&quot; id=&quot;action&quot;&gt;&lt;/a&gt;&lt;a href=&quot;#action&quot; aria-hidden=&quot;true&quot; class=&quot;hash-link&quot;&gt;&lt;svg class=&quot;hash-link-icon&quot; aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Action&lt;/h2&gt;
+"/><meta property="og:image" content="https://litphp.github.io/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://litphp.github.io/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/foundation.min.css"/><link rel="alternate" type="application/atom+xml" href="https://litphp.github.io/blog/atom.xml" title="LitPHP Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://litphp.github.io/blog/feed.xml" title="LitPHP Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/lit.svg" alt="LitPHP"/><h2 class="headerTitleWithLogo">LitPHP</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/quickstart">Quick Start</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/runner">Runner and servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Nimo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/nimo">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-condition">Condition</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-exception">Exception handling</a></li><li class="navListItem"><a class="navItem" href="/docs/nimo-roll">Write your own</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Voltage</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/voltage">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/voltage-view">View</a></li><li class="navListItem"><a class="navItem" href="/docs/voltage-router">Router</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Air</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/air">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/air-local">Local Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/air-dynamic">Dynamic Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/air-di">Dependency Injection</a></li><li class="navListItem"><a class="navItem" href="/docs/air-config">Configuration</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Core concepts of Lit</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="action"></a><a href="#action" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Action</h2>
+<blockquote>
+<p>Write your controller code in action</p>
+</blockquote>
+<p><strong>Action</strong> is the <strong>C</strong> part in MVC pattern. We take the name action because in many other framework, controller is a class containing multiple endpoint (RequestHandler), whereas action is only one. <code>BoltAbstractAction</code> is the dafault base class of action, but we recommend you to have your own base class, even without any code, that extends <code>BoltAbstractAction</code></p>
+<ul>
+<li>Action class is one implementation of <code>RequestHandlerInterface</code>, any other implementation can also be used.</li>
+<li>We enable <a href="#setter-injection">setter injection</a> in our <code>BoltAbstractAction</code>. In fact, this is the only recommended use case of setter injection.</li>
+<li>Psr <code>ResponseFactoryInterface</code> is required and by default provided by <code>BoltZendConfiguration</code></li>
+<li>Action could create view to render response. By default the <code>json()</code> method creates a view that render json output. More (template engine view, view with your restful convention, etc) can be added in your base action.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="view"></a><a href="#view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View</h2>
+<blockquote>
+<p>Populate response in view</p>
+</blockquote>
+<p><strong>View</strong>, by our definition, is a helper class which is responsible to generate response object for action class.</p>
+<h3><a class="anchor" aria-hidden="true" id="integrating-template-engine"></a><a href="#integrating-template-engine" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrating template engine</h3>
+<p>We are planning to provide some adapter view implementations for popular template engine, before that, you can find a simple example <a href="/docs/voltage-view">here</a></p>
+<p>If you are using some view other that <code>JsonView</code>, you should add a factory method for it in your base action class.</p>
+<pre><code class="hljs css language-php">    <span class="hljs-comment">// in action class</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plate</span><span class="hljs-params">(string $name)</span>
+    </span>{
+        $view = <span class="hljs-keyword">$this</span>-&gt;plateViewFactory-&gt;produce();
+    
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;attachView($view-&gt;setTemplateName($name));
+    }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="router"></a><a href="#router" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Router</h2>
+<blockquote>
+<p>Locate and populate action class in router</p>
+</blockquote>
+<p><strong>Router</strong> is where we match the request and find correct <strong>action</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="routing-to-find-stub"></a><a href="#routing-to-find-stub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Routing to find stub</h3>
+<p>We use <code>FastRouteConfiguration</code> from <code>litphp/router-fast-route</code> package, which uses <code>nikic/fast-route</code> to do actual routing logic. The <code>$routes</code> param fed into it is a callback with <code>\FastRoute\RouteCollector</code> param, on which you can invoke methods to add route into FastRoute. (If you want write a class for it, you can extend <code>FastRouteDefinition</code>, which is a invokable class with same signature)</p>
+<p>The value you fed into <code>RouteCollector</code> is called <strong>stub</strong>, it's a stub for concrete <strong>action</strong> class, so you can delay the instantiate, reducing cost for having bunch of actions (often with different but many service instances bounded)</p>
+<h3><a class="anchor" aria-hidden="true" id="resolving-the-stub"></a><a href="#resolving-the-stub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resolving the stub</h3>
+<p><strong>Stub</strong> can be following value</p>
+<ul>
+<li>A <code>callable</code> value which follow the signature of <code>RequestHandlerInterface::handle</code> (request =&gt; response)</li>
+<li>A <code>RequestHandlerInterface</code> instance, it's used directly</li>
+<li>A <code>ResponseInterface</code> instance, it's returned without any other operation</li>
+<li>At last, a string class name, or array with two value <code>[string $classname, array $extraParameters]</code>, this is delegated to <code>Facotry::instantiate</code>. see dependency injection part for more details</li>
+</ul>
+<p>You can change this behaviour by implementing <code>RouterStubResolverInterface</code> and fed it into <strong>router</strong> instance.</p>
+<h3><a class="anchor" aria-hidden="true" id="getting-route-variables"></a><a href="#getting-route-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting route variables</h3>
+<p>The variable caught by <code>FastRoute</code> is available in <code>$request-&gt;getAttribute(KEY)</code></p>
+<h3><a class="anchor" aria-hidden="true" id="not-found"></a><a href="#not-found" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Not found</h3>
+<p>We use <code>null</code> value to indicate not found, and both <code>FastRouteRouter</code> and <code>BoltStubResolver</code> receives a <code>$notFound</code> parameter, to be used as the stub of not found. If finally the stub is still a <code>null</code>, or failed to be recognized, a <code>StubResolveException</code> will be thrown, which in the case, contains a default 404 response. Use a catch to catch that exception is another way to handle not found (by this way, it will include both router not found and wrong stub provided by router).</p>
+<h2><a class="anchor" aria-hidden="true" id="middleware"></a><a href="#middleware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Middleware</h2>
+<blockquote>
+<p>Organize reusable logic with middleware</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="create-your-middleware"></a><a href="#create-your-middleware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create your middleware</h3>
+<p>Any <a href="https://www.php-fig.org/psr/psr-15/">PSR-15</a> middleware can be used directly. If you are writing new ones, you may refer <a href="/docs/nimo-roll">this page</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="attach-middleware-to-your-app"></a><a href="#attach-middleware-to-your-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attach middleware to your app</h3>
+<p>The <code>MiddlewareInterface</code> fed into <code>BoltApp</code> is the default middlware injection point. You can pass any middleware instance into it. Or if you have multiple middleware, assemble them into one with <code>MiddlewarePipe</code></p>
+<pre><code class="hljs css language-php"><span class="hljs-comment">// configuration</span>
+C::join(BoltApp::class, MiddlewareInterface::class) =&gt; <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    $middlewarePipe = <span class="hljs-keyword">new</span> MiddlewarePipe();
+
+    $middlewarePipe-&gt;append(SOME_MIDDLEWARE);
+    $middlewarePipe-&gt;append(ANOTHER_MIDDLEWARE);
+
+    <span class="hljs-keyword">return</span> $middlewarePipe;
+},
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="bundled-middleware"></a><a href="#bundled-middleware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bundled middleware</h3>
+<p>We provide some middleware useful to communicate between different part of your application by default.</p>
+<h4><a class="anchor" aria-hidden="true" id="requestcontext"></a><a href="#requestcontext" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RequestContext</h4>
+<p>This is a spl <code>\ArrayObject</code> subclass, implementing <code>MiddlewareInterface</code>, and attached to the request. Use this object saves keyspace of psr request attributes, and, methods on <code>\ArrayObject</code> is available.</p>
+<pre><code class="hljs css language-php"><span class="hljs-comment">// in somewhere you may write the context</span>
+RequestContext::fromRequest($request)[<span class="hljs-string">'foo'</span>] = <span class="hljs-string">'bar'</span>;
+
+
+<span class="hljs-comment">// later you may read from it</span>
+$foo = RequestContext::fromRequest($request)[<span class="hljs-string">'foo'</span>]; <span class="hljs-comment">// 'bar'</span>
+<span class="hljs-comment">// we enable ARRAY_AS_PROPS flag by default, so this also works</span>
+$foo = <span class="hljs-keyword">$this</span>-&gt;context()-&gt;foo; <span class="hljs-comment">// 'bar'</span>
+<span class="hljs-comment">// p.s. if you are inside `BoltAbstractAction`, just use $this-&gt;context() to get RequestContext instance like above</span>
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="eventshub"></a><a href="#eventshub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>EventsHub</h4>
+<p>This is <code>symfony/event-dispatcher</code> integration. You can find a <code>EventDispatcher</code> instance inside this.</p>
+<pre><code class="hljs css language-php"><span class="hljs-comment">// we passthru `addListener` and `dispatch` method to EventDispatcher</span>
+EventsHub::fromRequest($request)-&gt;addListener(MyEvent::EVENT_FOO, $listener);
+
+<span class="hljs-comment">// events() method in `BoltAbstractAction` get the instance</span>
+<span class="hljs-comment">// later you may trigger above listener</span>
+<span class="hljs-keyword">$this</span>-&gt;events()-&gt;dispatch(MyEvent::EVENT_FOO, <span class="hljs-keyword">new</span> MyEvent());
+
+<span class="hljs-comment">// if you need other method of EventDispatcher, get it</span>
+<span class="hljs-keyword">$this</span>-&gt;events()-&gt;getEventDispatcher();<span class="hljs-comment">// the instance</span>
+</code></pre>
+<p>Also, EventsHub will trigger before &amp; after event around inner logic</p>
+<pre><code class="hljs css language-php">BoltEvent::EVENT_BEFORE_LOGIC
+BoltEvent::EVENT_AFTER_LOGIC
+</code></pre>
+<p>Note although the instance is attached to request, but the before event is dispatched <strong>before</strong> action runs, so you need listen to it early. Get the event hub instance by <code>$app-&gt;getEventsHub()</code> in that case.</p>
+<p>The <code>BoltEvent</code> is sent with these two event. You may change the <code>$beforeEvent['request']</code> or <code>$afterEvent['response']</code> to change the request / response. You may set <code>$beforeEvent['response']</code> (by default it's not exist) to intercept the logic. <code>$afterEvent['request']</code> is provided, but changing that has no effect.</p>
+<h2><a class="anchor" aria-hidden="true" id="dependency-injection"></a><a href="#dependency-injection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dependency Injection</h2>
+<blockquote>
+<p>Connect everything with dependency injection</p>
+</blockquote>
+<p>We assume you have basic concept of dependency injection here. If you don't, you may read some <a href="http://php-di.org/doc/understanding-di.html">introduction from php-di</a> first.</p>
+<p>In our <a href="https://github.com/litphp/project">template project</a>, we run our app like this</p>
+<pre><code class="hljs css language-php">BoltZendRunner::run($configuration); <span class="hljs-comment">// configuration for `litphp/air` (dependency injection)</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="basic-configuration"></a><a href="#basic-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Configuration</h3>
+<h4><a class="anchor" aria-hidden="true" id="instance-and-singleton"></a><a href="#instance-and-singleton" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance and singleton</h4>
+<p>Create a <code>FastRouteRouter</code> singleton instance for who need a <code>RouterInterface</code></p>
+<pre><code class="hljs css language-php">RouterInterface::class =&gt; C::singleton(FastRouteRouter::class), <span class="hljs-comment">// use Lit\Air\Configurator as C;</span>
+</code></pre>
+<p>If you need multiple instance, use <code>C::instance</code> instead. There's a second parameter <code>array $extra</code>, we will discuss it later.</p>
+<h4><a class="anchor" aria-hidden="true" id="builder"></a><a href="#builder" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Builder</h4>
+<p>Write a builder method / closure to create you instance.</p>
+<pre><code class="hljs css language-php">Schema::class =&gt; <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(SourceBuilder $sourceBuilder, TypeConfigDecorator $typeConfigDecorator)</span> </span>{
+    <span class="hljs-keyword">return</span> BuildSchema::build($sourceBuilder-&gt;build(), $typeConfigDecorator);
+},
+</code></pre>
+<p>(the example comes from experimental GraphQL integration)</p>
+<p>We use a closure directly here, that means a singleton builder. If you need multiple instance, use <code>C::builder</code> instead.</p>
+<p>Also you can see the builder can have some parameter, which will be injected automatically.</p>
+<h4><a class="anchor" aria-hidden="true" id="value-alias"></a><a href="#value-alias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Value / Alias</h4>
+<p>Use <code>C::value</code> to wrap a pre-populated value, we recommend you always do this. Currently, closure and array containing key <code>$</code> are required to be wrapped, but this may change in future.</p>
+<p>Use <code>C::alias</code> to get some other value from the DI container. This can be useful for embedded configuration ($extra).</p>
+<h4><a class="anchor" aria-hidden="true" id="autowire-and-extra-parameters"></a><a href="#autowire-and-extra-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Autowire and extra parameters</h4>
+<p>DI factory will try to populate parameters of constructor and builder function required. The precedence is:</p>
+<ol>
+<li>Extra
+<ul>
+<li>search the <code>$extra</code> parameter provided in <code>C::instance</code>/<code>C::singleton</code> first, the key <code>&quot;$classname::&quot;</code> in container secondly.</li>
+<li>for each array provided, search following key
+<ol>
+<li>the parameter name</li>
+<li>the parameter classname (typehint)</li>
+<li>the parameter index (?th parameter, zero-based)</li>
+</ol></li>
+<li>the value can be another configuration array value</li>
+</ul></li>
+<li>Defined configuration entry with parameter classname (typehinted) as key</li>
+<li>Try to populate instance by classname</li>
+<li>Default value of the parameter</li>
+<li>At last, throw a ContainerException</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="setter-injection"></a><a href="#setter-injection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setter Injection</h3>
+<p>Constructor injection works in most cases, but <strong>action</strong> classes are often coupled with many other classes, constantly changing these dependencies, and may often be extended serveral times (making write all dependency in constructor function clumsy). We provide setter injection for this use case. Of course you can enable it in any other class, by adding a const <code>const SETTER_INJECTOR = SetterInjector::class;</code></p>
+<p>We scan all the public method start with <code>inject</code> with one required parameter, then re-use the <a href="#autowire-and-extra-parameters">autowire</a> process to populate dependency, and invoke the inject method. Below is how we inject <code>ResponseFactoryInterface</code> to our base action class.</p>
+<pre><code class="hljs css language-php"><span class="hljs-comment">//in action class</span>
+<span class="hljs-comment">/**
+ * <span class="hljs-doctag">@var</span> ResponseFactoryInterface
+ */</span>
+<span class="hljs-keyword">protected</span> $responseFactory;
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectResponseFactory</span><span class="hljs-params">(ResponseFactoryInterface $responseFactory)</span>
+</span>{
+    <span class="hljs-keyword">$this</span>-&gt;responseFactory = $responseFactory;
+}
+
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="more-details"></a><a href="#more-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>More details</h4>
+<p>There are more details about dependency injection at <a href="air">guide about lit/air</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="runners"></a><a href="#runners" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Runners</h2>
+<p>You should continue to <a href="/docs/runner">runners</a> section to see options about how to actually run your application.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/quickstart"><span class="arrow-prev">← </span><span>Quick Start</span></a><a class="docs-next button" href="/docs/runner"><span>Runner and servers</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#action">Action</a></li><li><a href="#view">View</a><ul class="toc-headings"><li><a href="#integrating-template-engine">Integrating template engine</a></li></ul></li><li><a href="#router">Router</a><ul class="toc-headings"><li><a href="#routing-to-find-stub">Routing to find stub</a></li><li><a href="#resolving-the-stub">Resolving the stub</a></li><li><a href="#getting-route-variables">Getting route variables</a></li><li><a href="#not-found">Not found</a></li></ul></li><li><a href="#middleware">Middleware</a><ul class="toc-headings"><li><a href="#create-your-middleware">Create your middleware</a></li><li><a href="#attach-middleware-to-your-app">Attach middleware to your app</a></li><li><a href="#bundled-middleware">Bundled middleware</a></li></ul></li><li><a href="#dependency-injection">Dependency Injection</a><ul class="toc-headings"><li><a href="#basic-configuration">Basic Configuration</a></li><li><a href="#setter-injection">Setter Injection</a></li></ul></li><li><a href="#runners">Runners</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/lit.svg" alt="LitPHP" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/.">QuickStart</a></div><div><h5>Community</h5><a href="https://gitter.im/litphp/Lobby?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link" target="_blank" rel="noreferrer noopener"><img src="//badges.gitter.im/litphp.png" alt="Chat on gitter"/></a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/litphp">GitHub</a></div></section><section class="copyright">Copyright © 2019 McFog Wang</section></footer></div></body></html>
