@@ -93,7 +93,7 @@
 <tr><td>value</td><td>FixedValueRecipe</td><td><code>value($value)</code></td></tr>
 </tbody>
 </table>
-<p>For decorator, the name should be <code>singleton</code> or <code>callback</code> for bundled decorators, and the decorator clasname if you write your custom one, the value are setted as decorator option. The singleton decorator don't need option so just use <code>null</code> , and the callback decoration's option is the callback (wrapper).</p>
+<p>For decorator, the name should be <code>singleton</code> or <code>callback</code> for bundled decorators, and the decorator classname if you write your custom one, the value are setted as decorator option. The singleton decorator don't need option so just use <code>null</code> , and the callback decorator's option is the callback (wrapper).</p>
 <h2><a class="anchor" aria-hidden="true" id="configuration-conventions"></a><a href="#configuration-conventions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration conventions</h2>
 <h4><a class="anchor" aria-hidden="true" id="single-c"></a><a href="#single-c" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>single C</h4>
 <p><code>use Lit\Air\Configurator as C;</code> this makes it easier to read and write configuration files.</p>
@@ -104,9 +104,9 @@
 <p>There're some <code>C::</code> method receiving <code>array $extra</code> parameter, which wil be fed into <code>$factory-&gt;instantiate</code> / <code>$factory-&gt;produce</code>. The value in <code>$extra</code> is again treated as configuration, so it's pretty common to nest configuration in configuration. We recommend use alias to flatten such nesting.</p>
 <p><code>C::alias</code> receives multiple (namespaced) strings and will call <code>C::join</code> for you.</p>
 <h4><a class="anchor" aria-hidden="true" id="merging-configuration"></a><a href="#merging-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>merging configuration</h4>
-<p>When merging different part of configuration (or overriding some), we recommend use native array union operator (simple <code>+</code>). This is easy to write, native, and should be enough if you follow our convention.</p>
+<p>When merging different part of configuration (or overriding some), we recommend to use native array union operator (<code>+</code> or <code>+=</code>). This is easy to write and manage, and should be enough if you follow our convention.</p>
 <h4><a class="anchor" aria-hidden="true" id="configuration-class-method"></a><a href="#configuration-class-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>configuration class / method</h4>
-<p>If you're writing some reusable or default configuration, it's verry common that to write a method to return a configuration array. Our convention arount this is use <code>FooBar::configuration(/*parameters*/)</code> for configuration method, and use <code>FooConfiguration</code> as configuration class, and <code>FooConfiguration::default(/*parameters*/)</code> as the default configuration method.</p>
+<p>If you're writing some reusable or default configuration, it's very common that to write a method to return a configuration array. Our convention arount this is use <code>FooBar::configuration(/*parameters*/)</code> for configuration method, and use <code>FooConfiguration</code> as configuration class, and <code>FooConfiguration::default(/*parameters*/)</code> as the default configuration method.</p>
 <p>When your configuration is closely related to a single class, just add a configuration method to it. When there are (or will be) multiple related class, or your class or configuration itself is complicated, or having many other static method, you may want a dedicated configuration class.</p>
 <p>These configuration methods should be static, and may have parameters.</p>
 <h2><a class="anchor" aria-hidden="true" id="a-commented-example"></a><a href="#a-commented-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A commented example</h2>
@@ -134,10 +134,10 @@
                     <span class="hljs-string">'methodNotAllowed'</span> =&gt; C::alias(FastRouteRouter::class, <span class="hljs-string">'methodNotAllowed'</span>),
                     <span class="hljs-string">'notFound'</span> =&gt; C::alias(FastRouteRouter::class, <span class="hljs-string">'notFound'</span>),
                 ]),
-                    <span class="hljs-comment">// null value of configuration will be resolved to null</span>
+                <span class="hljs-comment">// null value of configuration will be resolved to null</span>
                 C::join(FastRouteRouter::class, <span class="hljs-string">'methodNotAllowed'</span>) =&gt; <span class="hljs-keyword">null</span>,
                 C::join(FastRouteRouter::class, <span class="hljs-string">'notFound'</span>) =&gt; <span class="hljs-keyword">null</span>,
-                      <span class="hljs-comment">// FastRoute\Dispatcher is interface, so can't use `provideParameter` as above</span>
+                <span class="hljs-comment">// FastRoute\Dispatcher is interface, so can't use `provideParameter` as above</span>
                 Dispatcher::class =&gt; C::singleton( <span class="hljs-comment">// use C::produce here is also good, there differences are pretty subtle, but singleton is more safe to use</span>
                     CachedDispatcher::class,
                     [
@@ -148,7 +148,8 @@
                         <span class="hljs-string">'dispatcherClass'</span> =&gt; GCBDispatcher::class, <span class="hljs-comment">// this is a plain string</span>
                     ]
                 ),
-                C::join(CachedDispatcher::class, <span class="hljs-string">'cache'</span>) =&gt; C::produce(VoidSingleValue::class), <span class="hljs-comment">// VoidSingleValue is a stateless class, without construct parameter and no reason to create a second instance, use `C::produce` under this situation to reuse it's instance</span>
+                <span class="hljs-comment">// VoidSingleValue is a stateless class, without construct parameter and no reason to create a second instance, use `C::produce` under this situation to reuse it's instance</span>
+                C::join(CachedDispatcher::class, <span class="hljs-string">'cache'</span>) =&gt; C::produce(VoidSingleValue::class),
                 C::join(CachedDispatcher::class, DataGenerator::class) =&gt; C::singleton(GCBDataGenerator::class),
                 C::join(CachedDispatcher::class, RouteParser::class) =&gt; C::singleton(StdRouteParser::class),
                 C::join(CachedDispatcher::class, <span class="hljs-string">'routeDefinition'</span>) =&gt; $routeDefinition,
@@ -156,7 +157,7 @@
     }
 
 </code></pre>
-<p>It's really a lot of configurations! For comparison we'll write some pseudo code of creating such object without DI and without singleton (reuse), and hardcode everything.</p>
+<p>That's really a lot of configurations! For comparison we'll write some pseudo code of creating such object without DI and without singleton (reuse), and hardcode everything.</p>
 <blockquote>
 <p>Note the order of configuration is naturally top-down since you write it by fixing dependency exceptions, but the hand write constructing code must be bottom-up so it's harder to read</p>
 </blockquote>
