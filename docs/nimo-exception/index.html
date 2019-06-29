@@ -54,12 +54,12 @@
 <pre><code class="hljs css language-php">$handler-&gt;catch($catcher, \Throwable::class);
 $middleware-&gt;catch($catcher, \RuntimeException::class);
 </code></pre>
-<p>where <code>$catcher</code> is a callable with signature</p>
-<pre><code class="hljs css language-php">catcher(
-    \Throwable $exception, 
-    RequestInterface $request, 
-    RequestHandlerInterface $orignalHandler, 
-    MiddlewareInterface $originalMiddleware <span class="hljs-comment">// receive a NoopMiddleware in case of handler</span>
+<p>where <code>$catcher</code> is instance of <code>ExceptionHandlerInterface</code></p>
+<pre><code class="hljs css language-php">handle(
+  \Throwable $exception,
+  ServerRequestInterface $request,
+  RequestHandlerInterface $orignalHandler,
+  MiddlewareInterface $originalMiddleware
 ): ResponseInterface
 </code></pre>
 <p>This is powered by <code>CatchMiddleware</code> and <code>MiddlewareTrait</code>/<code>HandlerTrait</code>. To use this without using trait on 3rd party middlewares,
