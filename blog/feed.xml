@@ -4,7 +4,7 @@
         <title>LitPHP Blog</title>
         <link>https://litphp.github.io/blog</link>
         <description>The best place to stay up-to-date with the latest LitPHP news and events.</description>
-        <lastBuildDate>Sun, 04 Nov 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 30 Jun 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://litphp.github.io/blog</link>
         </image>
         <copyright>Copyright © 2019 McFog Wang</copyright>
+        <item>
+            <title><![CDATA[Introducing 0.9.0]]></title>
+            <link>https://litphp.github.io/blog/2019/06/30/introducing-0-9-0.html</link>
+            <guid>https://litphp.github.io/blog/2019/06/30/introducing-0-9-0.html</guid>
+            <pubDate>Sun, 30 Jun 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I'm really excited to release v0.9.0 of all LitPHP components.</p> <p>I'm a big fan of unopinionated frameworks, with only essential structral code included, with stable conventions and interfaces to interact with other libraries smoothly, and be least opin...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Roadmap towards 0.9]]></title>
             <link>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9.html</link>

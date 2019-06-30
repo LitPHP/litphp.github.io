@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://litphp.github.io/blog</id>
     <title>LitPHP Blog</title>
-    <updated>2018-11-04T06:00:00Z</updated>
+    <updated>2019-06-30T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://litphp.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest LitPHP news and events.</subtitle>
     <logo>https://litphp.github.io/img/lit.svg</logo>
     <rights>Copyright © 2019 McFog Wang</rights>
+    <entry>
+        <title type="html"><![CDATA[Introducing 0.9.0]]></title>
+        <id>https://litphp.github.io/blog/2019/06/30/introducing-0-9-0.html</id>
+        <link href="https://litphp.github.io/blog/2019/06/30/introducing-0-9-0.html">
+        </link>
+        <updated>2019-06-30T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>I'm really excited to release v0.9.0 of all LitPHP components.</p> <p>I'm a big fan of unopinionated frameworks, with only essential structral code included, with stable conventions and interfaces to interact with other libraries smoothly, and be least opin...</p>]]></summary>
+        <author>
+            <name>McFog Wang</name>
+            <uri>http://about.mcfog.wang/</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Roadmap towards 0.9]]></title>
         <id>https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9.html</id>

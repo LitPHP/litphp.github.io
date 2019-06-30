@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Documentation · LitPHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;LitPHP is a collection of components, here&#x27;s a list of them.&lt;/p&gt;
+"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Documentation · LitPHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://litphp.github.io/index.html"/><meta property="og:description" content="&lt;p&gt;LitPHP is a collection of components, here&#x27;s a list of them.&lt;/p&gt;
+"/><meta property="og:image" content="https://litphp.github.io/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://litphp.github.io/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/foundation.min.css"/><link rel="alternate" type="application/atom+xml" href="https://litphp.github.io/blog/atom.xml" title="LitPHP Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://litphp.github.io/blog/feed.xml" title="LitPHP Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/lit.svg" alt="LitPHP"/><h2 class="headerTitleWithLogo">LitPHP</h2></a><a href="/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/next/" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/next/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/next/concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/next/runner">Runner and servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Nimo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/next/nimo">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/nimo-condition">Condition</a></li><li class="navListItem"><a class="navItem" href="/docs/next/nimo-exception">Exception handling</a></li><li class="navListItem"><a class="navItem" href="/docs/next/nimo-roll">Write your own</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Voltage</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/next/voltage">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/voltage-view">View</a></li><li class="navListItem"><a class="navItem" href="/docs/next/voltage-router">Router</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Air</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/next/air">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/next/air-local">Local Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/next/air-dynamic">Dynamic Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/next/air-di">Dependency Injection</a></li><li class="navListItem"><a class="navItem" href="/docs/next/air-config">Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Bolt</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/next/bolt">Introduction</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Documentation</h1></header><article><div><span><p>LitPHP is a collection of components, here's a list of them.</p>
+<table>
+<thead>
+<tr><th style="text-align:left">Name</th><th>Description</th><th>Based on</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/air"><strong>litphp/air</strong></a></td><td>dependency injection</td><td><a href="https://www.php-fig.org/psr/psr-11/">PSR11</a></td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/nimo"><strong>litphp/nimo</strong></a></td><td>middleware organizer</td><td><a href="https://www.php-fig.org/psr/psr-15/">PSR15</a></td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/voltage"><strong>litphp/voltage</strong></a></td><td>fundamental application structure</td><td>litphp/nimo<br /><a href="https://www.php-fig.org/psr/psr-17/">PSR17</a></td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/bolt"><strong>litphp/bolt</strong></a></td><td>the microframework</td><td>litphp/voltage<br />litphp/air</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/middleware-ip-address"><strong>litphp/middleware-ip-address</strong></a></td><td>a middleware retrieving request ip</td><td>litphp/nimo<br /></td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/middleware-cookie"><strong>litphp/middleware-cookie</strong></a></td><td>a middleware read/write http cookies</td><td>litphp/nimo<br />dflydev/fig-cookies</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/router-fast-route"><strong>litphp/router-fast-route</strong></a></td><td>a router that integrates FastRoute</td><td>litphp/voltage<br />nikic/fast-route</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/runner-zend-sapi"><strong>litphp/runner-zend-sapi</strong></a></td><td>run you bolt app with zend-diactoros on standard SAPI</td><td>litphp/bolt<br />zendframework/zend-diactoros</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/runner-react"><strong>litphp/runner-react</strong></a></td><td>run you bolt app with ReactPHP</td><td>litphp/bolt<br />react/http</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/runner-road-runner"><strong>litphp/runner-road-runner</strong></a></td><td>run you bolt app with Roadrunner</td><td>litphp/bolt<br />spiral/roadrunner</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/runner-swoole"><strong>litphp/runner-swoole</strong></a></td><td>run you bolt app with Swoole</td><td>litphp/bolt<br />swoole</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/nexus"><strong>litphp/nexus</strong></a></td><td>utility / interface helps development</td><td></td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/view-plates"><strong>litphp/view-plates</strong></a></td><td>use plates as templating engine</td><td>league/plates</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/view-php"><strong>litphp/view-php</strong></a></td><td>use native php file as templating engine</td><td>slim/php-view</td></tr>
+<tr><td style="text-align:left"><a href="https://github.com/litphp/view-twig"><strong>litphp/view-twig</strong></a></td><td>use twig as templating engine</td><td>twig/twig</td></tr>
+</tbody>
+</table>
+<p>To start write your application, you should read <a href="quickstart">quick start</a>. There's a quick glance of <a href="concepts">core concepts</a>. To run your application under various environments, you should look at <a href="runner">this doc about runner</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/next/quickstart"><span>Quick Start</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/lit.svg" alt="LitPHP" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/.">QuickStart</a></div><div><h5>Community</h5><a href="https://gitter.im/litphp/Lobby?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link" target="_blank" rel="noreferrer noopener"><img src="//badges.gitter.im/litphp.png" alt="Chat on gitter"/></a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/litphp">GitHub</a></div></section><section class="copyright">Copyright © 2019 McFog Wang</section></footer></div></body></html>
