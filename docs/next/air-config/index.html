@@ -63,7 +63,7 @@
 <li>If value is an array with key '$', it's preserved &quot;array notation&quot; of recipe, will be converted to recipe object (more detail in next section)</li>
 <li>Finally, we use the value directly, that's said scalar type, resource type, most user object can be directly used.
 <ul>
-<li>for array, we recommend always wrap with <code>Container::value</code> (FixedValueRecipe) to be explicit</li>
+<li>for array, we recommend always wrap with <code>FixedValueRecipe</code> to be explicit, simple use <code>C::value($array)</code></li>
 </ul></li>
 </ul>
 <p>Keys ended with <code>::</code> should be array providing dependency for <a href="air-di#working-on-dependencies">DI procedure</a>, it's value must be array, and items inside are parsed by above rule</p>
