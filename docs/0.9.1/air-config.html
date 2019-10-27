@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuration · LitPHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Although configuration may well be most used part in air, we put it at last part, since it&#x27;s basically related to all features of air. In short words, configuration is a way to describe state of container in native PHP array. Being a native PHP array, we keep it easy to do both side: you can easily call `json_decode` or `Yaml::parse` or any other parsing method to get it from some format, AND you can also build it up with PHP, with help of type hinting and IDE support. We provide a `Configurator` class, which includes a bunch of static method, to build the configuration array."/><meta name="docsearch:version" content="0.9.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuration · LitPHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://litphp.github.io/"/><meta property="og:description" content="Although configuration may well be most used part in air, we put it at last part, since it&#x27;s basically related to all features of air. In short words, configuration is a way to describe state of container in native PHP array. Being a native PHP array, we keep it easy to do both side: you can easily call `json_decode` or `Yaml::parse` or any other parsing method to get it from some format, AND you can also build it up with PHP, with help of type hinting and IDE support. We provide a `Configurator` class, which includes a bunch of static method, to build the configuration array."/><meta property="og:image" content="https://litphp.github.io/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://litphp.github.io/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/foundation.min.css"/><link rel="alternate" type="application/atom+xml" href="https://litphp.github.io/blog/atom.xml" title="LitPHP Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://litphp.github.io/blog/feed.xml" title="LitPHP Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/lit.svg" alt="LitPHP"/><h2 class="headerTitleWithLogo">LitPHP</h2></a><a href="/versions"><h3>0.9.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/0.9.1/" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Air</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/runner">Runner and servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Nimo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-condition">Condition</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-exception">Exception handling</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-roll">Write your own</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Voltage</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage-view">View</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage-router">Router</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Air</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-local">Local Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-dynamic">Dynamic Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-di">Dependency Injection</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/0.9.1/air-config">Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Bolt</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/bolt">Introduction</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Configuration</h1></header><article><div><span><p>Although configuration may well be most used part in air, we put it at last part, since it's basically related to all features of air. In short words, configuration is a way to describe state of container in native PHP array. Being a native PHP array, we keep it easy to do both side: you can easily call <code>json_decode</code> or <code>Yaml::parse</code> or any other parsing method to get it from some format, AND you can also build it up with PHP, with help of type hinting and IDE support. We provide a <code>Configurator</code> class, which includes a bunch of static method, to build the configuration array.</p>
+<h2><a class="anchor" aria-hidden="true" id="structure-of-configuration"></a><a href="#structure-of-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Structure of configuration</h2>
+<p>In configuration array, the top-level key is the entry key of container, and the value is resolved by following rules</p>
+<ul>
+<li>If value is object implementing  <code>Recipeinterface</code> (recipe object), it's used directly (register to container)</li>
+<li>If value is a callable, it's recognized as a builder function, will return a singleton-ized (decorated) <code>BuilderRecipe</code> object with value. If you've used <a href="https://github.com/silexphp/Pimple">Pimple</a> you will find way home</li>
+<li>If value is an array with key '$', it's preserved &quot;array notation&quot; of recipe, will be converted to recipe object (more detail in next section)</li>
+<li>Finally, we use the value directly, that's said scalar type, resource type, most user object can be directly used.
+<ul>
+<li>for array, we recommend always wrap with <code>FixedValueRecipe</code> to be explicit, simple use <code>C::value($array)</code></li>
+</ul></li>
+</ul>
+<p>Keys ended with <code>::</code> should be array providing dependency for <a href="air-di#working-on-dependencies">DI procedure</a>, it's value must be array, and items inside are parsed by above rule</p>
+<h2><a class="anchor" aria-hidden="true" id="array-notation-of-recipe-object"></a><a href="#array-notation-of-recipe-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array notation of recipe object</h2>
+<p>Here's an example</p>
+<pre><code class="hljs css language-php">[
+  <span class="hljs-string">'$'</span> =&gt; <span class="hljs-string">'instance'</span>, <span class="hljs-comment">// type</span>
+  <span class="hljs-string">'decorator'</span> =&gt; [
+    <span class="hljs-string">'decorator_name'</span> =&gt; $decorator_option,
+    <span class="hljs-comment">// ...</span>
+  ],
+  
+  <span class="hljs-comment">// integer keys: parameters of Container::instance() method</span>
+  $className,
+  $extra,
+]
+</code></pre>
+<blockquote>
+<p>PHP array can contain integer and string keys at same time, and unkeyed entry can be mixed with keyed entry without problem. Under the hood we just unset <code>$</code> and <code>decorator</code> from the array and pass remained values to Container::xxx method</p>
+</blockquote>
+<p>The possible $ types are listed below, they are just static method name of <code>Container</code> which return a recipe object.</p>
+<table>
+<thead>
+<tr><th>$</th><th>Recipe</th><th>Method Signature</th></tr>
+</thead>
+<tbody>
+<tr><td>alias</td><td>AliasRecipe</td><td><code>alias(string $alias)</code></td></tr>
+<tr><td>autowire</td><td>AutowireRecipe</td><td><code>autowire(?string $className = null, array $extra = [])</code></td></tr>
+<tr><td>instance</td><td>InstanceRecipe</td><td><code>instance(?string $className = null, array $extra = [])</code></td></tr>
+<tr><td>builder</td><td>BuilderRecipe</td><td><code>builder(callable $builder, array $extra = [])</code></td></tr>
+<tr><td>value</td><td>FixedValueRecipe</td><td><code>value($value)</code></td></tr>
+</tbody>
+</table>
+<p>For decorator, the name should be <code>singleton</code> or <code>callback</code> for bundled decorators, and the decorator classname if you write your custom one, the value are setted as decorator option. The singleton decorator don't need option so just use <code>null</code> , and the callback decorator's option is the callback (wrapper).</p>
+<h2><a class="anchor" aria-hidden="true" id="configuration-conventions"></a><a href="#configuration-conventions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration conventions</h2>
+<h4><a class="anchor" aria-hidden="true" id="single-c"></a><a href="#single-c" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>single C</h4>
+<p><code>use Lit\Air\Configurator as C;</code> this makes it easier to read and write configuration files.</p>
+<h4><a class="anchor" aria-hidden="true" id="naming-and-namespacing"></a><a href="#naming-and-namespacing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>naming and namespacing</h4>
+<p>Class names and interface names should be used to provide default value or default implementation.E.g. you may set psr <code>LoggerInterface</code> to provide a logger for most of your objects, but also can specify for some class (maybe important ones) to use some other logger instance.</p>
+<p>Configuration keys should namespaced by delimeter <code>::</code>, <code>C::join</code> method concat parameter strings for you.</p>
+<h4><a class="anchor" aria-hidden="true" id="alias"></a><a href="#alias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>alias</h4>
+<p>There're some <code>C::</code> method receiving <code>array $extra</code> parameter, which wil be fed into <code>$factory-&gt;instantiate</code> / <code>$factory-&gt;produce</code>. The value in <code>$extra</code> is again treated as configuration, so it's pretty common to nest configuration in configuration. We recommend use alias to flatten such nesting.</p>
+<p><code>C::alias</code> receives multiple (namespaced) strings and will call <code>C::join</code> for you.</p>
+<h4><a class="anchor" aria-hidden="true" id="merging-configuration"></a><a href="#merging-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>merging configuration</h4>
+<p>When merging different part of configuration (or overriding some), we recommend to use native array union operator (<code>+</code> or <code>+=</code>). This is easy to write and manage, and should be enough if you follow our convention.</p>
+<h4><a class="anchor" aria-hidden="true" id="configuration-class-method"></a><a href="#configuration-class-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>configuration class / method</h4>
+<p>If you're writing some reusable or default configuration, it's very common that to write a method to return a configuration array. Our convention arount this is use <code>FooBar::configuration(/*parameters*/)</code> for configuration method, and use <code>FooConfiguration</code> as configuration class, and <code>FooConfiguration::default(/*parameters*/)</code> as the default configuration method.</p>
+<p>When your configuration is closely related to a single class, just add a configuration method to it. When there are (or will be) multiple related class, or your class or configuration itself is complicated, or having many other static method, you may want a dedicated configuration class.</p>
+<p>These configuration methods should be static, and may have parameters.</p>
+<h2><a class="anchor" aria-hidden="true" id="a-commented-example"></a><a href="#a-commented-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A commented example</h2>
+<p>Here's the configuration method for FastRouteRouter which integrates <code>nikic/FastRoute</code></p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">FastRoute</span>\<span class="hljs-title">DataGenerator</span>\<span class="hljs-title">GroupCountBased</span> <span class="hljs-title">as</span> <span class="hljs-title">GCBDataGenerator</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">FastRoute</span>\<span class="hljs-title">Dispatcher</span>\<span class="hljs-title">GroupCountBased</span> <span class="hljs-title">as</span> <span class="hljs-title">GCBDispatcher</span>;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">default</span><span class="hljs-params">($routeDefinition)</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (is_callable($routeDefinition)) {
+            <span class="hljs-comment">// use C::value to wrap callable value so they can be passed directly</span>
+            $routeDefinition = C::value($routeDefinition);
+        }
+
+        <span class="hljs-keyword">return</span> [
+                <span class="hljs-comment">// provide implementation for RouterInterface, required by RouterConfiguration</span>
+                <span class="hljs-comment">// use alias to escape nesting</span>
+                RouterInterface::class =&gt; C::alias(FastRouteRouter::class), 
+
+                <span class="hljs-comment">// since the key name is just the classname, we use `C::provideParameter`, which fed `null` to `$classname` of `AutowireRecipe`, let it use key as classname</span>
+                FastRouteRouter::class =&gt; C::provideParameter([
+                    <span class="hljs-comment">// constructor parameters, again use alias to escape</span>
+                    Dispatcher::class =&gt; C::alias(Dispatcher::class),
+                    RouterStubResolverInterface::class =&gt; C::singleton(BoltStubResolver::class), <span class="hljs-comment">// it's rare to override this, so just hardcode here</span>
+                    <span class="hljs-string">'methodNotAllowed'</span> =&gt; C::alias(FastRouteRouter::class, <span class="hljs-string">'methodNotAllowed'</span>),
+                    <span class="hljs-string">'notFound'</span> =&gt; C::alias(FastRouteRouter::class, <span class="hljs-string">'notFound'</span>),
+                ]),
+                <span class="hljs-comment">// null value of configuration will be resolved to null</span>
+                C::join(FastRouteRouter::class, <span class="hljs-string">'methodNotAllowed'</span>) =&gt; <span class="hljs-keyword">null</span>,
+                C::join(FastRouteRouter::class, <span class="hljs-string">'notFound'</span>) =&gt; <span class="hljs-keyword">null</span>,
+                <span class="hljs-comment">// FastRoute\Dispatcher is interface, so can't use `provideParameter` as above</span>
+                Dispatcher::class =&gt; C::singleton( <span class="hljs-comment">// use C::produce here is also good, there differences are pretty subtle, but singleton is more safe to use</span>
+                    CachedDispatcher::class,
+                    [
+                        <span class="hljs-string">'cache'</span> =&gt; C::alias(CachedDispatcher::class, <span class="hljs-string">'cache'</span>),
+                        DataGenerator::class =&gt; C::alias(CachedDispatcher::class, DataGenerator::class),
+                        RouteParser::class =&gt; C::alias(CachedDispatcher::class, RouteParser::class),
+                        <span class="hljs-string">'routeDefinition'</span> =&gt; C::alias(CachedDispatcher::class, <span class="hljs-string">'routeDefinition'</span>),
+                        <span class="hljs-string">'dispatcherClass'</span> =&gt; GCBDispatcher::class, <span class="hljs-comment">// this is a plain string</span>
+                    ]
+                ),
+                <span class="hljs-comment">// VoidSingleValue is a stateless class, without construct parameter and no reason to create a second instance, use `C::produce` under this situation to reuse it's instance</span>
+                C::join(CachedDispatcher::class, <span class="hljs-string">'cache'</span>) =&gt; C::produce(VoidSingleValue::class),
+                C::join(CachedDispatcher::class, DataGenerator::class) =&gt; C::singleton(GCBDataGenerator::class),
+                C::join(CachedDispatcher::class, RouteParser::class) =&gt; C::singleton(StdRouteParser::class),
+                C::join(CachedDispatcher::class, <span class="hljs-string">'routeDefinition'</span>) =&gt; $routeDefinition,
+            ] + RouterConfiguration::default(); <span class="hljs-comment">// merge the configuration of common router apps</span>
+    }
+
+</code></pre>
+<p>That's really a lot of configurations! For comparison we'll write some pseudo code of creating such object without DI and without singleton (reuse), and hardcode everything.</p>
+<blockquote>
+<p>Note the order of configuration is naturally top-down since you write it by fixing dependency exceptions, but the hand write constructing code must be bottom-up so it's harder to read</p>
+</blockquote>
+<pre><code class="hljs css language-php">$parser = <span class="hljs-keyword">new</span> StdRouteParser();
+$dg = <span class="hljs-keyword">new</span> GCBDataGenerator();
+$cache = <span class="hljs-keyword">new</span> VoidSingleValue();
+
+$dispatcher= <span class="hljs-keyword">new</span> CachedDispatcher($cache, $db, $parser, $routeDefinition, GCBDispatcher::class);
+
+$stubResolver = <span class="hljs-keyword">new</span> BoltStubResolver($container);
+$stubMethodNotAllowed = <span class="hljs-keyword">null</span>;
+$stubNotFound = <span class="hljs-keyword">null</span>;
+$router = <span class="hljs-keyword">new</span> FastRouteRouter($dispatcher, $stubResolver, $stubMethodNotAllowed, $stubNotFound);
+
+<span class="hljs-comment">// use $router as RouterInterface</span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/0.9.1/air-di"><span class="arrow-prev">← </span><span>Dependency Injection</span></a><a class="docs-next button" href="/docs/0.9.1/bolt"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#structure-of-configuration">Structure of configuration</a></li><li><a href="#array-notation-of-recipe-object">Array notation of recipe object</a></li><li><a href="#configuration-conventions">Configuration conventions</a></li><li><a href="#a-commented-example">A commented example</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/lit.svg" alt="LitPHP" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/.">QuickStart</a></div><div><h5>Community</h5><a href="https://gitter.im/litphp/Lobby?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link" target="_blank" rel="noreferrer noopener"><img src="//badges.gitter.im/litphp.png" alt="Chat on gitter"/></a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/litphp">GitHub</a></div></section><section class="copyright">Copyright © 2019 McFog Wang</section></footer></div></body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · LitPHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="To create a new project, you may use our project boilerplate:"/><meta name="docsearch:version" content="0.9.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quick Start · LitPHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://litphp.github.io/"/><meta property="og:description" content="To create a new project, you may use our project boilerplate:"/><meta property="og:image" content="https://litphp.github.io/img/favicon.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://litphp.github.io/img/favicon.png"/><link rel="shortcut icon" href="/img/favicon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/foundation.min.css"/><link rel="alternate" type="application/atom+xml" href="https://litphp.github.io/blog/atom.xml" title="LitPHP Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://litphp.github.io/blog/feed.xml" title="LitPHP Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/lit.svg" alt="LitPHP"/><h2 class="headerTitleWithLogo">LitPHP</h2></a><a href="/versions"><h3>0.9.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/0.9.1/" target="_self">Docs</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/0.9.1/quickstart">Quick Start</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/concepts">Core concepts</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/runner">Runner and servers</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Nimo</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-condition">Condition</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-exception">Exception handling</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/nimo-roll">Write your own</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Voltage</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage-view">View</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/voltage-router">Router</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Air</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-local">Local Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-dynamic">Dynamic Entries</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-di">Dependency Injection</a></li><li class="navListItem"><a class="navItem" href="/docs/0.9.1/air-config">Configuration</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Bolt</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/0.9.1/bolt">Introduction</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Quick Start</h1></header><article><div><span><p>To create a new project, you may use our project boilerplate:</p>
+<pre><code class="hljs css language-bash">composer create-project --remove-vcs litphp/project myproject
+<span class="hljs-comment"># you will be prompt to input your project namespace, we do the replace work for you</span>
+<span class="hljs-built_in">cd</span> myproject
+php -S 127.0.0.1:3080 public/index.php
+
+</code></pre>
+<p>Before write your business logic, there're some decision you need to take. For some of them we've already pick a default solution (often the most popular one).</p>
+<h2><a class="anchor" aria-hidden="true" id="how-to-run-the-app"></a><a href="#how-to-run-the-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to run the app</h2>
+<p>FPM with a single entry point <code>index.php</code> is the most common case. (And it's compatible with built-in debug server <code>php -S</code>), we've created that entry file for you in <code>public/index.php</code></p>
+<p>See <a href="runner">runner</a> page for more runners (Swoole/ReactPHP and more).</p>
+<h2><a class="anchor" aria-hidden="true" id="routers-or-just-not-to-use"></a><a href="#routers-or-just-not-to-use" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Routers (or just not) to use</h2>
+<p><code>nikic/fastroute</code> is our default choice, it should work fine in most situation. But implement or integrate another route library is easy too.</p>
+<p>Here we just continue with the fastroute, and next problem is where and how you call the register methods in <code>\FastRoute\RouteCollector</code>, a.k.a route discovery</p>
+<h2><a class="anchor" aria-hidden="true" id="route-discovery"></a><a href="#route-discovery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Route discovery</h2>
+<p>In the boilerplate, we just write a single method receiving <code>\FastRoute\RouteCollector</code>, and register all routes in there, this should be fine for small to medium project (maybe with help of <code>$routeCollector-&gt;addGroup</code>, or just breakdown into several smaller methods).</p>
+<p>Another paradigm of route discovery, which is &quot;distributed&quot; (compared with centralized route discovery where you manage all routes in one place). You may use some filesystem iterator (glob or SPL RecursiveDirectoryIterator or <code>symfony/finder</code>) to traverse through you action class file (or other source of route), then get the route info from it somehow, then register it to <code>\FastRoute\RouteCollector</code></p>
+<h2><a class="anchor" aria-hidden="true" id="view-layer"></a><a href="#view-layer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View Layer</h2>
+<p>If you are writing bare json api, the <code>$action-&gt;json()</code>  is there. But if your view layer is more complicated, here we talk about how to integrate a view engine that's already adapted to be used by lit application.</p>
+<p>First require the package</p>
+<pre><code class="hljs css language-bash">composer require litphp/view-twig
+</code></pre>
+<p>Include the configuration (typically <code>configuration.php</code>, but don't forget to submit it as <code>configuration.dist.php</code>)</p>
+<pre><code class="hljs css language-php">$configuration += \Lit\View\Twig\TwigView::configuration(C::instance(\Twig\Loader\FilesystemLoader::class, [
+    <span class="hljs-keyword">__DIR__</span> . <span class="hljs-string">'/templates'</span> <span class="hljs-comment">// your template path</span>
+]));
+</code></pre>
+<p>and use the builder method trait in <code>BaseAction</code></p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseAction</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">BoltAbstractAction</span>
+</span>{
+    <span class="hljs-keyword">use</span> <span class="hljs-title">TwigViewBuilderTrait</span>;
+    <span class="hljs-comment">// ...</span>
+</code></pre>
+<p>That's all setup, now we start write some template in <code>templates/index.twig</code></p>
+<pre><code class="hljs css language-twig"><span class="xml">Hello </span><span class="hljs-template-variable">{{greetings}}</span><span class="xml">
+</span></code></pre>
+<p>and change <code>HomeAction</code> to render it</p>
+<pre><code class="hljs css language-php">    <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>: <span class="hljs-title">ResponseInterface</span>
+    </span>{
+        <span class="hljs-comment">// return new HtmlResponse(self::SOURCE);</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;twig(<span class="hljs-string">'index.twig'</span>)-&gt;render([
+            <span class="hljs-string">'greetings'</span> =&gt; <span class="hljs-string">'TwigView'</span>,
+        ]);
+    }
+
+</code></pre>
+<p>You should now be able to see your first page rendered by twig in <a href="http://127.0.0.1:3080">http://127.0.0.1:3080</a></p>
+<p>We also provide <a href="https://github.com/litphp/view-php">view-php</a> and <a href="https://github.com/litphp/view-plates">view-plates</a>. Both of them works similarly.</p>
+<h2><a class="anchor" aria-hidden="true" id="model-service-business-logic"></a><a href="#model-service-business-logic" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Model / Service / Business Logic</h2>
+<p>We deliberately avoid to make any assumption here. You should write your own business logic in your class  and use DI (setter injector) to inject them in action class to use it.</p>
+<p>You may check our <a href="https://github.com/litphp/todobackend">todobackend</a> implementation, which use repository pattern to decouple data layer (PDO) with business logic.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/0.9.1/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/0.9.1/concepts"><span>Core concepts</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#how-to-run-the-app">How to run the app</a></li><li><a href="#routers-or-just-not-to-use">Routers (or just not) to use</a></li><li><a href="#route-discovery">Route discovery</a></li><li><a href="#view-layer">View Layer</a></li><li><a href="#model-service-business-logic">Model / Service / Business Logic</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/lit.svg" alt="LitPHP" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/.">QuickStart</a></div><div><h5>Community</h5><a href="https://gitter.im/litphp/Lobby?utm_source=share-link&amp;utm_medium=link&amp;utm_campaign=share-link" target="_blank" rel="noreferrer noopener"><img src="//badges.gitter.im/litphp.png" alt="Chat on gitter"/></a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/litphp">GitHub</a></div></section><section class="copyright">Copyright © 2019 McFog Wang</section></footer></div></body></html>
