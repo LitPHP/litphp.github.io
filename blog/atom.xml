@@ -26,7 +26,7 @@
         <link href="https://litphp.github.io/blog/2018/11/04/roadmap-towards-0.9.html">
         </link>
         <updated>2018-11-04T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>This is our first blog entry. Since we are stepping forward to 0.9 release, here's a list of goal of the 0.9 version.</p> <ul> <li>API should be stable enough. We don't want to do any BC break in future 1.0 release.</li> <li>Complete documentation &amp; project sites</li> <li>Add ...</li></ul>]]></summary>
+        <summary type="html"><![CDATA[<p>This is our first blog entry. Since we are stepping forward to 0.9 release, here's a list of goal of the 0.9 version.</p> <ul> <li>API should be stable enough. We don't want to do any BC break in future 1.0 release.</li> <li>Complete documentation &amp; project sites</li> <li>Add...</li></ul>]]></summary>
         <author>
             <name>McFog Wang</name>
             <uri>http://about.mcfog.wang/</uri>
